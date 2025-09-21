@@ -1,20 +1,21 @@
-# Importamos los módulos necesarios
+# Import the necessary modules
 import random
 import string
 
-# Definimos los caracteres que se usarán para generar la contraseña
-# string.ascii_letters incluye letras minúsculas y mayúsculas
-# string.digits incluye números del 0 al 9
-# string.punctuation incluye caracteres especiales (!@#$%, etc.)
-caracteres = string.ascii_letters + string.digits + string.punctuation
+# Define the characters that will be used to generate the password
+# string.ascii_letters includes lowercase and uppercase letters
+# string.digits includes numbers from 0 to 9
+# string.punctuation includes special characters (!@#$%, etc.)
+characters = string.ascii_letters + string.digits + string.punctuation
 
-# Preguntamos al usuario qué longitud quiere para la contraseña
-longitud_contrasena = int(input("Introduce la longitud de la contraseña deseada: "))
+# Ask the user what length they want for the password
+password_length = int(input("Enter the desired password length: "))
 
-# Generamos la contraseña
-# random.choice() elige un carácter al azar de la lista
-# El bucle 'for' repite esta acción la cantidad de veces que indicó el usuario
-contrasena_generada = "".join(random.choice(caracteres) for i in range(longitud_contrasena))
+# Generate the password
+# random.choice() chooses a random character from the list
+# The 'for' loop repeats this action the number of times indicated by the user
+generated_password = "".join(random.choice(characters) for i in range(password_length))
 
-# Imprimimos la contraseña en la pantalla
-print("Tu nueva contraseña es: ", contrasena_generada)
+# Print the password on the screen
+
+print("Your new password is: ", generated_password)
